@@ -1,3 +1,14 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/swagger_server/__main__" }]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/swagger_server/__main__"
+    }
+  ],
+  "builds": [
+    {
+      "src": "swagger_server/__main__.py",
+      "use": "@vercel/python"
+    }
+  ]
 }
